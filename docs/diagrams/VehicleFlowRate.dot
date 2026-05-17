@@ -1,0 +1,19 @@
+// Diagram for VehicleFlowRate
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		"its-location_LocationThing" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-location:LocationThing</TD></TR></TABLE>> URL="https://w3id.org/itsdata/location/v1/LocationThing" margin=0]
+	}
+	VehicleFlowRate [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">VehicleFlowRate</TD></TR></TABLE>> URL="../VehicleFlowRate" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	VehicleFlowRate -> "its-location_LocationThing" [arrowhead=onormal style=solid]
+}

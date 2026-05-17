@@ -1,0 +1,160 @@
+site_name: ITS Ontology - Transport Network
+site_description: A registry for documenting the ontology of ITS Transport Network
+  terms
+repo_url: https://github.com/ISO-TC204/ontology-its-transport-network-v1
+nav:
+- Home: index.md
+- Micromobility Network Pattern:
+  - Micromobility Network Pattern Overview: classes/MicromobilityNetworkPattern.md
+  - Classes:
+    - Micromobility Lane: classes/MicromobilityLane.md
+    - Micromobility Link: classes/MicromobilityLink.md
+    - Micromobility Network: classes/MicromobilityNetwork.md
+    - Micromobility Path: classes/MicromobilityPath.md
+    - Micromobility Path Section: classes/MicromobilityPathSection.md
+    - Micromobility Path Segment: classes/MicromobilityPathSegment.md
+- Pedestrian Network Pattern:
+  - Pedestrian Network Pattern Overview: classes/PedestrianNetworkPattern.md
+  - Classes:
+    - Footpath: classes/Footpath.md
+    - Footpath Lane: classes/FootpathLane.md
+    - Footpath Link: classes/FootpathLink.md
+    - Footpath Network: classes/FootpathNetwork.md
+    - Footpath Section: classes/FootpathSection.md
+    - Footpath Segment: classes/FootpathSegment.md
+- Public Transport System Pattern:
+  - Public Transport System Pattern Overview: classes/PublicTransportSystemPattern.md
+  - Classes:
+    - Group Of Lines: classes/GroupOfLines.md
+    - Point On Route: classes/PointOnRoute.md
+    - Public Transport Element: classes/PublicTransportElement.md
+    - Public Transport Line: classes/PublicTransportLine.md
+    - Public Transport Route: classes/PublicTransportRoute.md
+    - Public Transport System: classes/PublicTransportSystem.md
+    - Public Transport System Thing: classes/PublicTransportSystemThing.md
+    - Route Point: classes/RoutePoint.md
+- Rail Network Pattern:
+  - Rail Network Pattern Overview: classes/RailNetworkPattern.md
+  - Classes:
+    - Rail Corridor: classes/RailCorridor.md
+    - Rail Network: classes/RailNetwork.md
+    - Rail Section: classes/RailSection.md
+    - Track Link: classes/TrackLink.md
+    - Track Segment: classes/TrackSegment.md
+- Road Network Pattern:
+  - Road Network Pattern Overview: classes/RoadNetworkPattern.md
+  - Classes:
+    - Road: classes/Road.md
+    - Road Lane: classes/RoadLane.md
+    - Road Link: classes/RoadLink.md
+    - Road Link User Type: classes/RoadLinkUserType.md
+    - Road Network: classes/RoadNetwork.md
+    - Road Section: classes/RoadSection.md
+    - Road Segment: classes/RoadSegment.md
+    - Vehicle Flow Rate: classes/VehicleFlowRate.md
+- Transport Alert Pattern:
+  - Transport Alert Pattern Overview: classes/TransportAlertPattern.md
+  - Classes:
+    - Transport Alert: classes/TransportAlert.md
+    - Transport Alert Thing: classes/TransportAlertThing.md
+- Transport Network Pattern:
+  - Transport Network Pattern Overview: classes/TransportNetworkPattern.md
+  - Classes:
+    - Junction: classes/Junction.md
+    - Network Element: classes/NetworkElement.md
+    - Scheduled Code: classes/ScheduledCode.md
+    - Transport Network: classes/TransportNetwork.md
+    - Transport Network Thing: classes/TransportNetworkThing.md
+    - Transport Node: classes/TransportNode.md
+    - Travelled Way: classes/TravelledWay.md
+    - Travelled Way Lane: classes/TravelledWayLane.md
+    - Travelled Way Link: classes/TravelledWayLink.md
+    - Travelled Way Section: classes/TravelledWaySection.md
+    - Travelled Way Segment: classes/TravelledWaySegment.md
+  - Properties:
+    - hasEndNode: properties/hasEndNode.md
+    - hasStartNode: properties/hasStartNode.md
+    - partOfTravelCorridor: properties/partOfTravelCorridor.md
+    - partOfTravelledWay: properties/partOfTravelledWay.md
+    - TransportNetworkObjectProperty: properties/TransportNetworkObjectProperty.md
+- Travel Corridor Pattern:
+  - Travel Corridor Pattern Overview: classes/TravelCorridorPattern.md
+  - Classes:
+    - Travel Corridor: classes/TravelCorridor.md
+    - Travel Corridor Link: classes/TravelCorridorLink.md
+    - Travel Corridor Segment: classes/TravelCorridorSegment.md
+site_url: https://isotc204.org/ontology-its-transport-network-v1/latest/
+copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+  <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
+  rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+  style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+  alt=""></a></p>
+theme:
+  name: material
+  features:
+  - content.code.copy
+  - content.status
+  - content.tooltips
+  - icons
+  - navigation.path
+  - navigation.top
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      question: fontawesome/solid/comments
+  palette:
+  - scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+extra_css:
+- stylesheets/extra.css
+extra_javascript:
+- https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+- javascripts/tablesort.js
+plugins:
+- search
+- git-revision-date-localized:
+    type: date
+markdown_extensions:
+- abbr
+- admonition
+- attr_list
+- def_list
+- md_in_html
+- meta
+- footnotes
+- pymdownx.blocks.caption
+- pymdownx.details
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+    use_pygments: true
+- pymdownx.inlinehilite
+- pymdownx.snippets:
+    base_path: docs
+    check_paths: true
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: ''
+- pymdownx.tabbed:
+    alternate_style: true
+- toc:
+    permalink: true
+extra:
+  search:
+    highlight: true
+  hide:
+  - title
+  version:
+    provider: mike
+    alias: true
+    default: latest

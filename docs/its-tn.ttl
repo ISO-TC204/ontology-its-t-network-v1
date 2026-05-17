@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <https://w3id.org/itsdata/transport-network/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix its-core: <https://w3id.org/itsdata/core/v1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+:ItsTransportNetwork
+    a owl:Ontology ;
+    dcterms:title "ITS Ontology for Transport Network"@en ;
+    skos:definition "Ontology that imports the transport-network pattern modules for transport-network, road, rail, pedestrian, micromobility, public transport, travel corridor, and alerts. All transport network elements are derived from geo:Feature via imports of the ITS Location ontology."@en ;
+    dcterms:creator "Kenneth Vaughn" ;
+    dcterms:created "Draft" ;
+    dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    its-core:draft "true" ;
+    owl:versionInfo "0.0.1" ;
+    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/ItsTransportNetwork/r0.1> ;
+    vann:preferredNamespacePrefix "its-tn" ;
+    vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" ;
+    owl:imports :TransportNetworkPattern ;
+    owl:imports :RoadNetworkPattern ;
+    owl:imports :RailNetworkPattern ;
+    owl:imports :PedestrianNetworkPattern ;
+    owl:imports :MicromobilityNetworkPattern ;
+    owl:imports :PublicTransportSystemPattern ;
+    owl:imports :TravelCorridorPattern ;
+    owl:imports :TransportAlertPattern .
+

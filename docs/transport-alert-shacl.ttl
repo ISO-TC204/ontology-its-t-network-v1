@@ -1,0 +1,33 @@
+BASE <https://w3id.org/itsdata/transport-network/v1/>
+PREFIX : <https://w3id.org/itsdata/transport-network/v1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
+PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
+PREFIX its-sh: <https://w3id.org/itsdata/shacl/v1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+:TransportAlertSHACL
+    a owl:Ontology ;
+    dcterms:title "SHACL rules for ITS Transport Alert pattern"@en ;
+    skos:definition "SHACL node shapes for transport-alert classes."@en ;
+    its-core:draft "true" ;
+    dcterms:created "Draft" ;
+    dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    owl:versionInfo "0.0.1" ;
+    owl:versionIRI <TransportAlertSHACL/r0.1> ;
+    owl:imports its-location:LocationCoreSHACL ;
+     owl:imports :TransportNetworkSHACL .
+
+:TransportAlertThingShape
+    a sh:NodeShape ;
+    sh:targetClass :TransportAlertThing ;
+    sh:and ( its-location:FeatureShape ) .
+
+:TransportAlertShape
+    a sh:NodeShape ;
+    sh:targetClass :TransportAlert ;
+    sh:and ( its-location:FeatureShape ) .
+
