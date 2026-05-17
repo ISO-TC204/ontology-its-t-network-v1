@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <https://w3id.org/itsdata/transport-network/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix its-core: <https://w3id.org/itsdata/core/v1/> .
+@prefix its-location: <https://w3id.org/itsdata/location/v1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+:TransportAlertPattern
+    a owl:Ontology ;
+    dcterms:title "ITS Ontology - Transport Network - Transport Alert Pattern"@en ;
+    skos:definition "Transport alert concepts that are relevant to the transport network."@en ;
+    dcterms:creator "Kenneth Vaughn" ;
+    dcterms:created "Draft" ;
+    dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    its-core:draft "true" ;
+    owl:imports :TransportNetworkPattern ;
+    owl:versionInfo "0.0.1" ;
+    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/TransportAlertPattern/r0.1> ;
+    vann:preferredNamespacePrefix "its-tn" ;
+    vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" .
+
+:TransportAlertThing
+    a owl:Class ;
+    rdfs:subClassOf :TransportNetworkThing ;
+    skos:definition "Any transport-related alerting or event feature."@en .
+
+:TransportAlert
+    a owl:Class ;
+    rdfs:subClassOf its-location:Feature ;
+    rdfs:subClassOf :TransportAlertThing ;
+    skos:definition "A feature representing a transport alert with spatial extent described by ITS Location geometries."@en .
+

@@ -1,0 +1,54 @@
+BASE <https://w3id.org/itsdata/transport-network/v1/>
+PREFIX : <https://w3id.org/itsdata/transport-network/v1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
+PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
+PREFIX its-sh: <https://w3id.org/itsdata/shacl/v1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+:MicromobilityNetworkSHACL
+    a owl:Ontology ;
+    dcterms:title "SHACL rules for ITS Micromobility Network pattern"@en ;
+    skos:definition "SHACL node shapes for micromobility-network classes, which inherit constraints from the ITS Location ontology."@en ;
+    its-core:draft "true" ;
+    dcterms:created "Draft" ;
+    dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    owl:versionInfo "0.0.1" ;
+    owl:versionIRI <MicromobilityNetworkSHACL/r0.1> ;
+    owl:imports its-location:LocationCoreSHACL ;
+    owl:imports its-location:LinearSHACL ;
+     owl:imports :TransportNetworkSHACL .
+
+:MicromobilityNetworkShape
+    a sh:NodeShape ;
+    sh:targetClass :MicromobilityNetwork ;
+    sh:and ( its-location:LocationGroupShape ) .
+
+:MicromobilityPathShape
+    a sh:NodeShape ;
+    sh:targetClass :MicromobilityPath ;
+    sh:and ( its-location:LinearFeatureShape ) .
+
+:MicromobilityLaneShape
+    a sh:NodeShape ;
+    sh:targetClass :MicromobilityLane ;
+    sh:and ( its-location:LinearFeatureShape ) .
+
+:MicromobilityLinkShape
+    a sh:NodeShape ;
+    sh:targetClass :MicromobilityLink ;
+    sh:and ( its-location:LinearFeatureShape ) .
+
+:MicromobilityPathSectionShape
+    a sh:NodeShape ;
+    sh:targetClass :MicromobilityPathSection ;
+    sh:and ( its-location:LinearFeatureShape ) .
+
+:MicromobilityPathSegmentShape
+    a sh:NodeShape ;
+    sh:targetClass :MicromobilityPathSegment ;
+    sh:and ( its-location:LinearFeatureShape ) .
+

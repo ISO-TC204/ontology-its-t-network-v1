@@ -1,0 +1,133 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <https://w3id.org/itsdata/transport-network/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix its-core: <https://w3id.org/itsdata/core/v1/> .
+@prefix its-location: <https://w3id.org/itsdata/location/v1/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+:TransportNetworkPattern
+    a owl:Ontology ;
+    dcterms:title "ITS Ontology - Transport Network - Core Pattern"@en ;
+    skos:definition "Core abstractions shared across transport network pattern modules (road, rail, pedestrian, micromobility, public transport, travel corridor, alerts), grounded on the ITS Location ontology features and geometries."@en ;
+    skos:note "This core module intentionally does not import any of the transport sub-pattern modules in order to avoid circular imports. Sub-patterns import this core."@en ;
+    dcterms:creator "Kenneth Vaughn" ;
+    dcterms:created "Draft" ;
+    dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    its-core:draft "true" ;
+    owl:imports its-location:LocationCorePattern ;
+    owl:imports its-location:PointPattern ;
+    owl:imports its-location:LinearPattern ;
+    owl:imports its-location:AreaPattern ;
+    owl:versionInfo "0.0.1" ;
+    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/TransportNetworkPattern/r0.1> ;
+    vann:preferredNamespacePrefix "its-tn" ;
+    vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" .
+
+#################################################################
+# Transport object properties (optional topology on linear links)
+#################################################################
+
+:TransportNetworkObjectProperty
+    a owl:ObjectProperty ;
+    skos:definition "Super-property for transport network topology and composition."@en .
+
+:hasStartNode
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :TransportNetworkObjectProperty ;
+    schema:domainIncludes :TravelledWayLink ;
+    schema:rangeIncludes :TransportNode ;
+    skos:definition "The directed start node of a network link (topology), represented as an its-location:PointFeature."@en .
+
+:hasEndNode
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :TransportNetworkObjectProperty ;
+    schema:domainIncludes :TravelledWayLink ;
+    schema:rangeIncludes :TransportNode ;
+    skos:definition "The directed end node of a network link (topology), represented as an its-location:PointFeature."@en .
+
+:partOfTravelledWay
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :TransportNetworkObjectProperty ;
+    schema:domainIncludes :TravelledWaySection ;
+    schema:domainIncludes :TravelledWaySegment ;
+    schema:domainIncludes :TravelledWayLane ;
+    schema:rangeIncludes :TravelledWay ;
+    skos:definition "Relates a section, segment, or lane feature to the parent travelled way it refines."@en .
+
+:partOfTravelCorridor
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :TransportNetworkObjectProperty ;
+    skos:definition "Relates a corridor link or corridor segment feature to the parent travel corridor feature."@en .
+
+#################################################################
+# Transport Network Pattern (generic)
+#################################################################
+
+:TransportNetworkThing
+    a owl:Class ;
+    rdfs:subClassOf its-location:Feature ;
+    skos:definition "Any transport-related geographic feature in the ITS transport-network domain. Subclass of its-location:Feature (and therefore geo:Feature)."@en .
+
+:TransportNetwork
+    a owl:Class ;
+    rdfs:subClassOf its-location:LocationGroup ;
+    rdfs:subClassOf :TransportNetworkThing ;
+    skos:definition "A set of transport network elements (links, nodes, ways) modelled as an its-location:LocationGroup of member its-location:Feature resources."@en .
+
+:NetworkElement
+    a owl:Class ;
+    rdfs:subClassOf :TransportNetworkThing ;
+    skos:definition "Abstract transport network element; concrete instances specialize using its-location:LinearFeature, its-location:PointFeature, its-location:AreaFeature, or its-location:LocationGroup."@en .
+
+:TransportNode
+    a owl:Class ;
+    rdfs:subClassOf its-location:PointFeature ;
+    rdfs:subClassOf :NetworkElement ;
+    skos:definition "A point feature at which network links may meet or which anchors linear topology."@en .
+
+:Junction
+    a owl:Class ;
+    rdfs:subClassOf :TransportNode ;
+    skos:definition "A transport node where two or more travelled ways or links connect."@en .
+
+:TravelledWay
+    a owl:Class ;
+    rdfs:subClassOf its-location:LinearFeature ;
+    rdfs:subClassOf :NetworkElement ;
+    skos:definition "A linear feature representing a generic travelled way (centreline or reference line)."@en .
+
+:TravelledWayLane
+    a owl:Class ;
+    rdfs:subClassOf its-location:LinearFeature ;
+    rdfs:subClassOf :NetworkElement ;
+    skos:definition "A linear feature for a single lane along a travelled way."@en .
+
+:TravelledWayLink
+    a owl:Class ;
+    rdfs:subClassOf its-location:LinearFeature ;
+    rdfs:subClassOf :NetworkElement ;
+    skos:definition "A linear feature representing a directed edge between two transport nodes in a network graph."@en .
+
+:TravelledWaySection
+    a owl:Class ;
+    rdfs:subClassOf its-location:LinearFeature ;
+    rdfs:subClassOf :NetworkElement ;
+    skos:definition "A linear feature that aggregates or references a contiguous portion of a travelled way."@en .
+
+:TravelledWaySegment
+    a owl:Class ;
+    rdfs:subClassOf its-location:LinearFeature ;
+    rdfs:subClassOf :NetworkElement ;
+    skos:definition "A linear feature for the smallest homogeneous piece of a travelled way in a given segmentation scheme."@en .
+
+:ScheduledCode
+    a owl:Class ;
+    rdfs:subClassOf its-location:LocationCode ;
+    skos:definition "A location code identifying a scheduled transport reference (e.g., trip, block, or timing group) in an external registry."@en .
+

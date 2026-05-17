@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <https://w3id.org/itsdata/transport-network/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix its-core: <https://w3id.org/itsdata/core/v1/> .
+@prefix its-location: <https://w3id.org/itsdata/location/v1/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+:TravelCorridorPattern
+    a owl:Ontology ;
+    dcterms:title "ITS Ontology - Transport Network - Travel Corridor Pattern"@en ;
+    skos:definition "Travel corridor concepts that are derived from ITS Location features and can be presented with multiple geometries."@en ;
+    dcterms:creator "Kenneth Vaughn" ;
+    dcterms:created "Draft" ;
+    dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    its-core:draft "true" ;
+    owl:imports :TransportNetworkPattern ;
+    owl:versionInfo "0.0.1" ;
+    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/TravelCorridorPattern/r0.1> ;
+    vann:preferredNamespacePrefix "its-tn" ;
+    vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" .
+
+:TravelCorridor
+    a owl:Class ;
+    rdfs:subClassOf its-location:LinearFeature ;
+    rdfs:subClassOf :NetworkElement ;
+    skos:definition "A linear reference for a travel corridor axis (multimodal or policy corridor)."@en .
+
+:TravelCorridorLink
+    a owl:Class ;
+    rdfs:subClassOf :TravelledWayLink ;
+    skos:definition "A directed link that is part of a travel corridor network."@en .
+
+:TravelCorridorSegment
+    a owl:Class ;
+    rdfs:subClassOf :TravelledWaySegment ;
+    skos:definition "A segment that is part of a travel corridor."@en .
+
+#################################################################
+# Property domain/range hints for this pattern
+#################################################################
+
+:hasStartNode schema:domainIncludes :TravelCorridorLink .
+:hasEndNode schema:domainIncludes :TravelCorridorLink .
+
+:partOfTravelCorridor
+    schema:domainIncludes :TravelCorridorLink ;
+    schema:domainIncludes :TravelCorridorSegment ;
+    schema:rangeIncludes :TravelCorridor .
+
