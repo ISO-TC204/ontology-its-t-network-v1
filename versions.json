@@ -2,6 +2,11 @@
   {
     "version": "2026-05-17_14-09-50",
     "title": "2026-05-17_14-09-50",
+    "aliases": []
+  },
+  {
+    "version": "v0.0.1-alpha.2",
+    "title": "v0.0.1-alpha.2",
     "aliases": [
       "latest"
     ]
