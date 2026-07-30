@@ -15,12 +15,13 @@
     skos:definition "Transport alert concepts that are relevant to the transport network."@en ;
     dcterms:creator "Kenneth Vaughn" ;
     dcterms:created "Draft" ;
-    dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    dcterms:modified "2026-07-30"^^xsd:date ;
     dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
     its-core:draft "true" ;
     owl:imports :TransportNetworkPattern ;
-    owl:versionInfo "0.0.1" ;
-    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/TransportAlertPattern/r0.1> ;
+    owl:versionInfo "0.0.1-alpha.2" ;
+    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/0.0.1-alpha.2> ;
+    owl:priorVersion               <https://w3id.org/itsdata/transport-network/v1/0.0.1-alpha.1> ;
     vann:preferredNamespacePrefix "its-t-network" ;
     vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" .
 

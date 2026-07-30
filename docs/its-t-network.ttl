@@ -13,11 +13,12 @@
     skos:definition "Ontology that imports the transport-network pattern modules for transport-network, road, rail, pedestrian, micromobility, public transport, travel corridor, and alerts. All transport network elements are derived from geo:Feature via imports of the ITS Location ontology."@en ;
     dcterms:creator "Kenneth Vaughn" ;
     dcterms:created "Draft" ;
-    dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    dcterms:modified "2026-07-30"^^xsd:date ;
     dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
     its-core:draft "true" ;
-    owl:versionInfo "0.0.1" ;
-    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/ItsTransportNetwork/r0.1> ;
+    owl:versionInfo "0.0.1-alpha.2" ;
+    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/0.0.1-alpha.2> ;
+    owl:priorVersion               <https://w3id.org/itsdata/transport-network/v1/0.0.1-alpha.1> ;
     vann:preferredNamespacePrefix "its-t-network" ;
     vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" ;
     owl:imports :TransportNetworkPattern ;
