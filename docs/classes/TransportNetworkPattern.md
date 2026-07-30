@@ -24,5 +24,13 @@ This pattern consists of the following classes:
 - [Travelled Way Link](TravelledWayLink.md)
 - [Travelled Way Section](TravelledWaySection.md)
 - [Travelled Way Segment](TravelledWaySegment.md)
+This module defines the following properties:
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../transport-network-pattern.ttl) and the SHACL [restrictions](../transport-network-shacl.ttl).
+- [hasEndNode](../properties/hasEndNode.md)
+- [hasStartNode](../properties/hasStartNode.md)
+- [partOfTravelCorridor](../properties/partOfTravelCorridor.md)
+- [partOfTravelledWay](../properties/partOfTravelledWay.md)
+- [TransportNetworkObjectProperty](../properties/TransportNetworkObjectProperty.md)
+
+
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../TransportNetworkPattern.ttl) and the SHACL [restrictions](../TransportNetworkSHACL.ttl).

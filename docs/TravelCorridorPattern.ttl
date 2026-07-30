@@ -22,7 +22,7 @@
     owl:imports :TransportNetworkPattern ;
     owl:versionInfo "0.0.1" ;
     owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/TravelCorridorPattern/r0.1> ;
-    vann:preferredNamespacePrefix "its-tn" ;
+    vann:preferredNamespacePrefix "its-t-network" ;
     vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" .
 
 :TravelCorridor

@@ -14,4 +14,4 @@ This pattern consists of the following classes:
 - [Travel Corridor Link](TravelCorridorLink.md)
 - [Travel Corridor Segment](TravelCorridorSegment.md)
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../travel-corridor-pattern.ttl) and the SHACL [restrictions](../travel-corridor-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../TravelCorridorPattern.ttl) and the SHACL [restrictions](../TravelCorridorSHACL.ttl).

@@ -17,4 +17,4 @@ This pattern consists of the following classes:
 - [Footpath Section](FootpathSection.md)
 - [Footpath Segment](FootpathSegment.md)
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../pedestrian-network-pattern.ttl) and the SHACL [restrictions](../pedestrian-network-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../PedestrianNetworkPattern.ttl) and the SHACL [restrictions](../PedestrianNetworkSHACL.ttl).

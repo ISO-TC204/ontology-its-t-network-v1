@@ -19,4 +19,4 @@ This pattern consists of the following classes:
 - [Public Transport System Thing](PublicTransportSystemThing.md)
 - [Route Point](RoutePoint.md)
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../public-transport-system-pattern.ttl) and the SHACL [restrictions](../public-transport-system-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../PublicTransportSystemPattern.ttl) and the SHACL [restrictions](../PublicTransportSystemSHACL.ttl).

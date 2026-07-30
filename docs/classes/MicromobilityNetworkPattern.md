@@ -17,4 +17,4 @@ This pattern consists of the following classes:
 - [Micromobility Path Section](MicromobilityPathSection.md)
 - [Micromobility Path Segment](MicromobilityPathSegment.md)
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../micromobility-network-pattern.ttl) and the SHACL [restrictions](../micromobility-network-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../MicromobilityNetworkPattern.ttl) and the SHACL [restrictions](../MicromobilityNetworkSHACL.ttl).

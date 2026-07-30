@@ -19,4 +19,4 @@ This pattern consists of the following classes:
 - [Road Segment](RoadSegment.md)
 - [Vehicle Flow Rate](VehicleFlowRate.md)
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../road-network-pattern.ttl) and the SHACL [restrictions](../road-network-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../RoadNetworkPattern.ttl) and the SHACL [restrictions](../RoadNetworkSHACL.ttl).

@@ -16,4 +16,4 @@ This pattern consists of the following classes:
 - [Track Link](TrackLink.md)
 - [Track Segment](TrackSegment.md)
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../rail-network-pattern.ttl) and the SHACL [restrictions](../rail-network-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../RailNetworkPattern.ttl) and the SHACL [restrictions](../RailNetworkSHACL.ttl).

@@ -4,6 +4,8 @@
 
 Ontology that imports the transport-network pattern modules for transport-network, road, rail, pedestrian, micromobility, public transport, travel corridor, and alerts. All transport network elements are derived from geo:Feature via imports of the ITS Location ontology.
 
+**License**: [http://creativecommons.org/licenses/by/4.0/](http://creativecommons.org/licenses/by/4.0/)
+
 The ITS Ontology for Transport Network consists of the following patterns:
 
 - [Micromobility Network](classes/MicromobilityNetworkPattern.md)
@@ -15,4 +17,4 @@ The ITS Ontology for Transport Network consists of the following patterns:
 - [Transport Network](classes/TransportNetworkPattern.md)
 - [Travel Corridor](classes/TravelCorridorPattern.md)
 
-The formal definition of this ontology is available in [TURTLE Syntax](its-tn.ttl).
+The formal definition of this ontology is available in [TURTLE Syntax](its-t-network.ttl).
