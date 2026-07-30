@@ -10,10 +10,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
-:RailNetworkPattern
+:MicromobilityNetworkPattern
     a owl:Ontology ;
-    dcterms:title "ITS Ontology - Transport Network - Rail Network Pattern"@en ;
-    skos:definition "This pattern defines rail network concepts, which are derived from ITS Location features and can be presented with multiple geometries."@en ;
+    dcterms:title "ITS Ontology - Transport Network - Micromobility Network Pattern"@en ;
+    skos:definition "This pattern defines micromobility network concepts, which are derived from ITS Location features and can be presented with multiple geometries."@en ;
     dcterms:creator "Kenneth Vaughn" ;
     dcterms:created "Draft" ;
     dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
@@ -21,40 +21,44 @@
     its-core:draft "true" ;
     owl:imports :TransportNetworkPattern ;
     owl:versionInfo "0.0.1" ;
-    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/RailNetworkPattern/r0.1> ;
-    vann:preferredNamespacePrefix "its-tn" ;
+    owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/MicromobilityNetworkPattern/r0.1> ;
+    vann:preferredNamespacePrefix "its-t-network" ;
     vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" .
 
-:RailNetwork
+:MicromobilityNetwork
     a owl:Class ;
     rdfs:subClassOf :TransportNetwork ;
-    skos:definition "A transport network for rail infrastructure."@en .
+    skos:definition "A transport network for micromobility (e.g., cycle, scooter) paths."@en .
 
-:RailCorridor
+:MicromobilityPath
     a owl:Class ;
-    rdfs:subClassOf its-location:AreaFeature ;
-    rdfs:subClassOf :NetworkElement ;
-    skos:definition "A two-dimensional rail corridor footprint or influence area."@en .
+    rdfs:subClassOf :TravelledWay ;
+    skos:definition "A travelled way intended for micromobility modes."@en .
 
-:RailSection
+:MicromobilityLane
     a owl:Class ;
-    rdfs:subClassOf :TravelledWaySection ;
-    skos:definition "A contiguous section of a rail alignment."@en .
+    rdfs:subClassOf :TravelledWayLane ;
+    skos:definition "A lane along a micromobility path."@en .
 
-:TrackLink
+:MicromobilityLink
     a owl:Class ;
     rdfs:subClassOf :TravelledWayLink ;
-    skos:definition "A directed rail track link between nodes."@en .
+    skos:definition "A directed micromobility link between nodes."@en .
 
 #################################################################
 # Property domain hints for this pattern
 #################################################################
 
-:hasStartNode schema:domainIncludes :TrackLink .
-:hasEndNode schema:domainIncludes :TrackLink .
+:hasStartNode schema:domainIncludes :MicromobilityLink .
+:hasEndNode schema:domainIncludes :MicromobilityLink .
 
-:TrackSegment
+:MicromobilityPathSection
+    a owl:Class ;
+    rdfs:subClassOf :TravelledWaySection ;
+    skos:definition "A contiguous section of a micromobility path."@en .
+
+:MicromobilityPathSegment
     a owl:Class ;
     rdfs:subClassOf :TravelledWaySegment ;
-    skos:definition "A homogeneous segment of track."@en .
+    skos:definition "A homogeneous segment of a micromobility path."@en .
 

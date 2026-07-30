@@ -7,7 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
-:ItsTransportNetwork
+:
     a owl:Ontology ;
     dcterms:title "ITS Ontology for Transport Network"@en ;
     skos:definition "Ontology that imports the transport-network pattern modules for transport-network, road, rail, pedestrian, micromobility, public transport, travel corridor, and alerts. All transport network elements are derived from geo:Feature via imports of the ITS Location ontology."@en ;
@@ -18,7 +18,7 @@
     its-core:draft "true" ;
     owl:versionInfo "0.0.1" ;
     owl:versionIRI <https://w3id.org/itsdata/transport-network/v1/ItsTransportNetwork/r0.1> ;
-    vann:preferredNamespacePrefix "its-tn" ;
+    vann:preferredNamespacePrefix "its-t-network" ;
     vann:preferredNamespaceUri "https://w3id.org/itsdata/transport-network/v1/" ;
     owl:imports :TransportNetworkPattern ;
     owl:imports :RoadNetworkPattern ;

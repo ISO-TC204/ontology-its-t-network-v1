@@ -6,49 +6,51 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
 PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
-PREFIX its-sh: <https://w3id.org/itsdata/shacl/v1/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vann: <http://purl.org/vocab/vann/>
 
-:MicromobilityNetworkSHACL
+:RoadNetworkSHACL
     a owl:Ontology ;
-    dcterms:title "SHACL rules for ITS Micromobility Network pattern"@en ;
-    skos:definition "SHACL node shapes for micromobility-network classes, which inherit constraints from the ITS Location ontology."@en ;
+    dcterms:title "SHACL rules for ITS Road Network pattern"@en ;
+    skos:definition "SHACL node shapes for road-network classes, which inherit constraints from the ITS Location ontology."@en ;
     its-core:draft "true" ;
     dcterms:created "Draft" ;
     dcterms:modified "2026-05-05T21:43:49Z"^^xsd:dateTime ;
+    vann:preferredNamespaceUri     "https://w3id.org/itsdata/transport-network/v1/";
+    vann:preferredNamespacePrefix  "its-t-network";
     owl:versionInfo "0.0.1" ;
-    owl:versionIRI <MicromobilityNetworkSHACL/r0.1> ;
+    owl:versionIRI <RoadNetworkSHACL/r0.1> ;
     owl:imports its-location:LocationCoreSHACL ;
     owl:imports its-location:LinearSHACL ;
      owl:imports :TransportNetworkSHACL .
 
-:MicromobilityNetworkShape
+:RoadNetworkShape
     a sh:NodeShape ;
-    sh:targetClass :MicromobilityNetwork ;
+    sh:targetClass :RoadNetwork ;
     sh:and ( its-location:LocationGroupShape ) .
 
-:MicromobilityPathShape
+:RoadShape
     a sh:NodeShape ;
-    sh:targetClass :MicromobilityPath ;
+    sh:targetClass :Road ;
     sh:and ( its-location:LinearFeatureShape ) .
 
-:MicromobilityLaneShape
+:RoadLaneShape
     a sh:NodeShape ;
-    sh:targetClass :MicromobilityLane ;
+    sh:targetClass :RoadLane ;
     sh:and ( its-location:LinearFeatureShape ) .
 
-:MicromobilityLinkShape
+:RoadLinkShape
     a sh:NodeShape ;
-    sh:targetClass :MicromobilityLink ;
+    sh:targetClass :RoadLink ;
     sh:and ( its-location:LinearFeatureShape ) .
 
-:MicromobilityPathSectionShape
+:RoadSectionShape
     a sh:NodeShape ;
-    sh:targetClass :MicromobilityPathSection ;
+    sh:targetClass :RoadSection ;
     sh:and ( its-location:LinearFeatureShape ) .
 
-:MicromobilityPathSegmentShape
+:RoadSegmentShape
     a sh:NodeShape ;
-    sh:targetClass :MicromobilityPathSegment ;
+    sh:targetClass :RoadSegment ;
     sh:and ( its-location:LinearFeatureShape ) .
 

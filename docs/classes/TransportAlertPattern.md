@@ -13,4 +13,4 @@ This pattern consists of the following classes:
 - [Transport Alert](TransportAlert.md)
 - [Transport Alert Thing](TransportAlertThing.md)
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../transport-alert-pattern.ttl) and the SHACL [restrictions](../transport-alert-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../TransportAlertPattern.ttl) and the SHACL [restrictions](../TransportAlertSHACL.ttl).
